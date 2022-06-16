@@ -1,0 +1,12 @@
+
+/* 
+    Created on : 8/04/2022, 15:25:16
+    Author     : Edy Leonel Letona Argueta 
+*/
+
+#menu-bar {
+    -fx-background-color: Linear-gradient(to bottom, #4EFFDF, #FFFFDE) ;
+    -fx-background-radius: 10 10 10 10;
+    -fx-text-fill: #FFFFFF;
+ 
+}

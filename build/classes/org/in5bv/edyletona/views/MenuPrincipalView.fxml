@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Menu?>
+<?import javafx.scene.control.MenuBar?>
+<?import javafx.scene.control.MenuItem?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+
+<AnchorPane id="AnchorPane" prefHeight="471.0" prefWidth="900.0" stylesheets="@../resources/css/EstiloMenuPrincipal.css" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="org.in5bv.edyletona.cesarbarillas.controllers.MenuPrincipalController">
+   <children>
+      <ImageView fitHeight="500.0" fitWidth="941.0" layoutX="-1.0" layoutY="-6.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../resources/images/hud-1-wallpaper-preview(1).png" />
+         </image>
+      </ImageView>
+      <MenuBar id="menu-bar" layoutX="52.0" layoutY="51.0" prefHeight="29.0" prefWidth="109.0">
+        <menus>
+          <Menu mnemonicParsing="false" text="Módulos">
+            <items>
+              <MenuItem mnemonicParsing="false" onAction="#clicAlumnos" text="Alumnos " />
+                  <MenuItem mnemonicParsing="false" onAction="#clicInstructores" text="Instructores" />
+                  <MenuItem mnemonicParsing="false" onAction="#clicSalones" text="Salones" />
+                  <MenuItem mnemonicParsing="false" onAction="#clicCarrerasTecnicas" text="Carreras técnicas " />
+                  <MenuItem mnemonicParsing="false" onAction="#clicHorarios" text="Horarios" />
+                  <MenuItem mnemonicParsing="false" onAction="#clicCursos" text="Cursos" />
+                  <MenuItem mnemonicParsing="false" onAction="#clicAsignacionesAlumnos" text="Asignación alumnos " />
+            </items>
+          </Menu>
+          <Menu mnemonicParsing="false" text="?">
+            <items>
+              <MenuItem mnemonicParsing="false" text="Acerca de..." />
+            </items>
+          </Menu>
+        </menus>
+      </MenuBar>
+   </children>
+</AnchorPane>

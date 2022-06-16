@@ -1,0 +1,194 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXTimePicker?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.CheckBox?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.layout.ColumnConstraints?>
+<?import javafx.scene.layout.GridPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.layout.RowConstraints?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane prefHeight="526.0" prefWidth="1043.0" stylesheets="@../resources/css/EstiloModulos.css" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="org.in5bv.edyletona.cesarbarillas.controllers.HorariosController">
+   <children>
+      <AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="526.0" prefWidth="910.0" stylesheets="@../resources/css/EstiloModulos.css">
+         <children>
+            <BorderPane prefHeight="526.0" prefWidth="911.0">
+               <left>
+                  <Pane id="panel-navegacion" prefHeight="506.0" prefWidth="214.0" BorderPane.alignment="CENTER">
+                     <children>
+                        <Pane id="pane-entidad" layoutX="36.0" prefHeight="152.0" prefWidth="142.0">
+                           <children>
+                              <VBox layoutX="23.0" layoutY="4.0" prefHeight="141.0" prefWidth="101.0">
+                                 <children>
+                                    <Label alignment="CENTER" prefHeight="55.0" prefWidth="139.0" text="Horarios">
+                                       <font>
+                                          <Font name="Berlin Sans FB" size="24.0" />
+                                       </font>
+                                    </Label>
+                                    <ImageView fitHeight="103.0" fitWidth="101.0" pickOnBounds="true" preserveRatio="true">
+                                       <image>
+                                          <Image url="@../resources/images/horario.png" />
+                                       </image>
+                                    </ImageView>
+                                 </children>
+                              </VBox>
+                           </children>
+                        </Pane>
+                        <VBox id="vbox-crud" layoutX="8.0" layoutY="181.0" prefHeight="308.0" prefWidth="196.0">
+                           <children>
+                              <HBox alignment="CENTER" prefHeight="77.0" prefWidth="163.0">
+                                 <children>
+                                    <Button fx:id="btnNuevo" alignment="TOP_LEFT" mnemonicParsing="false" onAction="#clicNuevo" prefHeight="77.0" prefWidth="178.0" styleClass="botones-crud" text="Nuevo">
+                                       <font>
+                                          <Font name="Berlin Sans FB" size="20.0" />
+                                       </font>
+                                       <graphic>
+                                          <ImageView fx:id="imgNuevo" fitHeight="63.0" fitWidth="65.0" pickOnBounds="true" preserveRatio="true">
+                                             <image>
+                                                <Image url="@../resources/images/nuevo.png" />
+                                             </image>
+                                          </ImageView>
+                                       </graphic>
+                                    </Button>
+                                 </children>
+                              </HBox>
+                              <HBox alignment="CENTER" prefHeight="80.0" prefWidth="166.0">
+                                 <children>
+                                    <Button fx:id="btnModificar" alignment="TOP_LEFT" mnemonicParsing="false" onAction="#clicModificar" prefHeight="77.0" prefWidth="180.0" styleClass="botones-crud" text="Modificar">
+                                       <font>
+                                          <Font name="Berlin Sans FB" size="20.0" />
+                                       </font>
+                                       <graphic>
+                                          <ImageView fx:id="imgModificar" fitHeight="63.0" fitWidth="65.0" pickOnBounds="true" preserveRatio="true">
+                                             <image>
+                                                <Image url="@../resources/images/modificar.png" />
+                                             </image>
+                                          </ImageView>
+                                       </graphic>
+                                    </Button>
+                                 </children>
+                              </HBox>
+                              <HBox alignment="CENTER" prefHeight="80.0" prefWidth="200.0">
+                                 <children>
+                                    <Button fx:id="btnEliminar" alignment="TOP_LEFT" mnemonicParsing="false" onAction="#clicEliminar" prefHeight="77.0" prefWidth="188.0" styleClass="botones-crud" text="Eliminar">
+                                       <font>
+                                          <Font name="Berlin Sans FB" size="20.0" />
+                                       </font>
+                                       <graphic>
+                                          <ImageView fx:id="imgEliminar" fitHeight="63.0" fitWidth="72.0" pickOnBounds="true" preserveRatio="true">
+                                             <image>
+                                                <Image url="@../resources/images/basura.png" />
+                                             </image>
+                                          </ImageView>
+                                       </graphic>
+                                    </Button>
+                                 </children>
+                              </HBox>
+                              <HBox alignment="CENTER" prefHeight="77.0" prefWidth="193.0">
+                                 <children>
+                                    <Button fx:id="btnReporte" alignment="TOP_LEFT" mnemonicParsing="false" onAction="#clicReporte" prefHeight="77.0" prefWidth="172.0" styleClass="botones-crud" text="Reporte">
+                                       <font>
+                                          <Font name="Berlin Sans FB" size="20.0" />
+                                       </font>
+                                       <graphic>
+                                          <ImageView fx:id="imgReporte" fitHeight="63.0" fitWidth="88.0" pickOnBounds="true" preserveRatio="true">
+                                             <image>
+                                                <Image url="@../resources/images/reporte.png" />
+                                             </image>
+                                          </ImageView>
+                                       </graphic>
+                                    </Button>
+                                 </children>
+                              </HBox>
+                           </children>
+                        </VBox>
+                     </children>
+                  </Pane>
+               </left>
+               <right>
+                  <AnchorPane prefHeight="526.0" prefWidth="829.0" BorderPane.alignment="CENTER">
+                     <children>
+                        <GridPane layoutX="25.0" layoutY="102.0" prefHeight="138.0" prefWidth="772.0">
+                           <columnConstraints>
+                              <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                              <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                              <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                              <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                              <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                              <ColumnConstraints />
+                           </columnConstraints>
+                           <rowConstraints>
+                              <RowConstraints maxHeight="127.0" minHeight="10.0" prefHeight="34.0" vgrow="SOMETIMES" />
+                              <RowConstraints maxHeight="127.0" minHeight="10.0" prefHeight="34.0" vgrow="SOMETIMES" />
+                              <RowConstraints maxHeight="91.0" minHeight="0.0" prefHeight="36.0" vgrow="SOMETIMES" />
+                              <RowConstraints maxHeight="127.0" minHeight="10.0" prefHeight="34.0" vgrow="SOMETIMES" />
+                              <RowConstraints maxHeight="91.0" minHeight="0.0" prefHeight="36.0" vgrow="SOMETIMES" />
+                              <RowConstraints maxHeight="109.0" minHeight="10.0" prefHeight="34.0" vgrow="SOMETIMES" />
+                           </rowConstraints>
+                           <children>
+                              <Label text="Horario de inicio:" GridPane.rowIndex="2">
+                                 <font>
+                                    <Font size="14.0" />
+                                 </font>
+                              </Label>
+                              <Label text="Horario final:" GridPane.columnIndex="2" GridPane.rowIndex="2">
+                                 <font>
+                                    <Font size="14.0" />
+                                 </font>
+                              </Label>
+                              <Label alignment="CENTER" contentDisplay="RIGHT" text="ID">
+                                 <font>
+                                    <Font size="14.0" />
+                                 </font>
+                              </Label>
+                              <TextField fx:id="txtId" disable="true" editable="false" GridPane.rowIndex="1" />
+                              <CheckBox fx:id="ckbLunes" mnemonicParsing="false" text="Lunes" GridPane.rowIndex="5" />
+                              <CheckBox fx:id="ckbMartes" mnemonicParsing="false" text="Martes" GridPane.columnIndex="1" GridPane.rowIndex="5" />
+                              <CheckBox fx:id="ckbMiercoles" mnemonicParsing="false" text="Miércoles" GridPane.columnIndex="2" GridPane.rowIndex="5" />
+                              <CheckBox fx:id="ckbJueves" mnemonicParsing="false" text="Jueves" GridPane.columnIndex="3" GridPane.rowIndex="5" />
+                              <CheckBox fx:id="ckbViernes" mnemonicParsing="false" text="Viernes" GridPane.columnIndex="4" GridPane.rowIndex="5" />
+                              <JFXTimePicker fx:id="jfxTimePickerInicio" GridPane.rowIndex="3" />
+                              <JFXTimePicker fx:id="jfxTimePickerFinal" GridPane.columnIndex="2" GridPane.rowIndex="3" />
+                           </children>
+                        </GridPane>
+                        <TableView fx:id="tblHorarios" layoutX="16.0" layoutY="257.0" onKeyReleased="#seleccionarElemento" onMouseClicked="#seleccionarElemento" prefHeight="231.0" prefWidth="798.0">
+                           <columns>
+                              <TableColumn fx:id="colId" prefWidth="75.0" text="ID" />
+                              <TableColumn fx:id="colHorarioInicio" prefWidth="147.0" text="Horario inicio" />
+                              <TableColumn fx:id="colHorarioFinal" prefWidth="126.0" text="Horario final" />
+                              <TableColumn fx:id="colLunes" prefWidth="89.0" text="Lunes" />
+                              <TableColumn fx:id="colMartes" prefWidth="88.0" text="Martes" />
+                              <TableColumn fx:id="colMiercoles" prefWidth="99.0" text="Miércoles" />
+                              <TableColumn fx:id="colJueves" prefWidth="84.0" text="Jueves" />
+                              <TableColumn fx:id="colViernes" prefWidth="89.0" text="Viernes" />
+                           </columns>
+                        </TableView>
+                        <ImageView fitHeight="90.0" fitWidth="225.0" layoutX="580.0" layoutY="14.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@../resources/images/minilogo.PNG" />
+                           </image>
+                        </ImageView>
+                        <ImageView fx:id="imgRegresar" fitHeight="70.0" fitWidth="73.0" layoutX="25.0" layoutY="14.0" onMouseClicked="#clicRegresar" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@../resources/images/izquierda.png" />
+                           </image>
+                        </ImageView>
+                     </children>
+                  </AnchorPane>
+               </right>
+            </BorderPane>
+         </children>
+      </AnchorPane>
+   </children>
+</AnchorPane>

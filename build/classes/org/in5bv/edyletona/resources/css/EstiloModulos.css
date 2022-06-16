@@ -1,0 +1,29 @@
+
+/* 
+    Created on : 19/04/2022, 19:11:28
+    Author     : Edy Leonel Letona Argueta
+*/
+
+#panel-navegacion {
+    -fx-background-color: #01152B;
+}
+
+#pane-entidad {
+    -fx-background-color: Linear-gradient(to bottom, #4EFFDF, #FFFFDE) ;
+    -fx-background-radius: 0 0 30 30;
+}
+
+#vbox-crud {
+    -fx-background-color: #01152B; 
+    -fx-background-radius: 25 25 25 25; 
+}
+
+.botones-crud {
+    -fx-background-color: #01152B;
+    -fx-text-fill: #FFFFFF;
+}
+
+.botones-crud:hover {
+    -fx-background-color: #E7E7E7;
+    -fx-text-fill: #000000;
+}
